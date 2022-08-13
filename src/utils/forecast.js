@@ -9,7 +9,7 @@ const forecast = (latitude, longitude, callback) => {
         } else if (body.cod === "400") {
             callback('Unable to find location', undefined)
         } else {
-            callback(undefined, body.weather[0].main + body.weather[0].description + '. The temperature is ' + body.main.temp + ' degree celsius')
+            callback(undefined, body.weather[0].main + ', ' + body.weather[0].description + '. The temperature is ' + body.main.temp + ' degree celsius')
         }
     })
 }
